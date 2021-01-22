@@ -3,7 +3,7 @@
   --accent-color-blue: #2196f3;
   --text-white-color: #ffffff;
   --color-head-link-title: #212121;
-  /*--background-page: #e5e5e5;*/
+  --border-header: #ececec;
   --hero-background-color: #2f303a;
   --background-grey-color: #f5f4fa;
   --footer-link-color: rgba(255, 255, 255, 0.6);
@@ -18,39 +18,83 @@ body {
   font-size: 14px;
 }
 
-/*     header     */
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+.list-customization {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link-customization {
+  text-decoration: none;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* ============ HEADER ============ */
+.header {
+  height: 80px;
+  max-width: 1600px;
+  border-bottom: 1px solid var(--border-header);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+
+  height: 79px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
 
 .header-logo-link {
+  /*display: inline-block;
+  padding-top: 24px;
+  padding-bottom: 25px;*/
+
   color: var(--color-head-link-title);
   font-family: var(--text-logo-font);
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.192;
+  line-height: 1.1925;
   letter-spacing: 0.03em;
-
-  text-decoration: none;
 }
 
 .logo-decoration {
   color: var(--accent-color-blue);
 }
 
-/*.header-nav-list,
-.contacts-list,
-.advantages-list,
-.services-list,
-.team-list,
-.footer-contacts-list,
-.portfolio-nav-list,
-.work-examples*/
-.list-customization {
-  list-style: none;
+.header-nav-list {
+  display: flex;
+  margin-left: 93px;
+}
+
+.header-nav-list-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .header-nav-link {
   color: var(--color-head-link-title);
-  text-decoration: none;
   font-weight: 500;
   line-height: 1.143;
   letter-spacing: 0.02em;
@@ -67,6 +111,15 @@ body {
   color: var(--accent-color-blue);
 }
 
+.contacts-list {
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .contacts-link {
   color: var(--main-text-color);
   font-weight: 500;
@@ -75,15 +128,27 @@ body {
   text-decoration: none;
 }
 
-/*    end header    */
+/* ============ END HEADER ============ */
 
-/*     HERO   */
+/* ============ HERO ============ */
 
 .hero {
+  max-width: 1600px;
+  height: 600px;
   background-color: var(--hero-background-color);
 }
 
+.hero-container {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
 .hero-title {
+  max-width: 695px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 40px;
+
   color: var(--text-white-color);
   font-weight: 900;
   font-size: 44px;
@@ -94,6 +159,12 @@ body {
 }
 
 .btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 200px;
+  padding: 8px 30px;
+
   color: var(--text-white-color);
   background-color: var(--accent-color-blue);
   font-family: var(--text-main-font);
@@ -106,16 +177,37 @@ body {
   border-radius: 4px;
 }
 
-/*     END HERO     */
+/* ============ END HERO ============ */
 
-/*  Наши преимущества  */
+/* ============ ADVANTAGES ============ */
 
-/*dorabotaju*/
+.advantages {
+  max-width: 1600px;
+  padding-top: 84px; /*+ скрытый заголовок 10px=94px, как в макете*/
+  padding-bottom: 94px;
+}
+
 .hidden-title {
   visibility: hidden;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.advantages-list {
+  display: flex;
+}
+
+.advantages-list-item {
+  max-width: 270px;
+}
+
+.advantages-list-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .advantages-list-title {
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.143;
@@ -131,12 +223,18 @@ body {
   color: var(--main-text-color);
 }
 
-/*  END Наши преимущества  */
+/* ============ END ADVANTAGES ============ */
 
-/*   services    */
+/* ============ SERVICES ============ */
+.services {
+  max-width: 1600px;
+  padding-bottom: 94px;
+}
 
 .services-title,
 .team-title {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.167;
@@ -146,48 +244,87 @@ body {
   color: var(--color-head-link-title);
 }
 
-/*   services    */
-/*       TEAM      */
+.services-list {
+  display: flex;
+}
+
+.services-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* ============ END SERVICES ============ */
+/* ============ TEAM ============ */
 
 .team {
+  padding-top: 94px;
+  padding-bottom: 94px;
   background-color: var(--background-grey-color);
 }
+
+.team-list {
+  display: flex;
+}
+
+.team-list-item {
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-description {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .team-list-title {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.188;
-  /*text-align: center;*/
+  text-align: center;
   letter-spacing: 0.03em;
 
   color: var(--color-head-link-title);
 }
 
-.team-list-description {
+.team-list-text {
   font-size: 16px;
   line-height: 1.188;
-  /* text-align: center; */
+  text-align: center;
   letter-spacing: 0.03em;
 
   color: var(--main-text-color);
 }
 
-/*       END TEAM      */
+/* ============ END TEAM ============ */
 
-/*     FOOTER    */
+/* ============ FOOTER ============ */
 
 .footer {
+  max-width: 1600;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--hero-background-color);
 }
 
 .footer-logo-link {
+  display: inline-block;
+  margin-bottom: 20px;
   color: var(--text-white-color);
   font-family: var(--text-logo-font);
   font-weight: 700;
   font-size: 26px;
   line-height: 1.192;
   letter-spacing: 0.03em;
+}
 
-  text-decoration: none;
+.footer-contacts-list-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .footer-contacts-link {
@@ -195,7 +332,6 @@ body {
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: var(--footer-link-color);
-  text-decoration: none;
 }
 
 .footer-contacts-link-address {
@@ -204,23 +340,48 @@ body {
   letter-spacing: 0.03em;
 
   color: var(--text-white-color);
-  text-decoration: none;
 }
 
-/*     END FOOTER      */
+/* ============ END FOOTER ============ */
 
-/*     PORFOLIO     */
+/* ============ PORFOLIO ============ */
+
+.hidden-title.none {
+  display: none;
+}
+
+.portfolio {
+  max-width: 1600px;
+  padding-top: 80px;
+  padding-bottom: 90px;
+}
+/* ============ BUTTON-NAVIGATION ============ */
+.button-navigation {
+  padding-bottom: 50px;
+}
+
+.portfolio-nav-list {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-nav-item:not(:last-child) {
+  margin-right: 8px;
+}
 
 .btn-portfolio {
+  display: inline-block;
+  min-width: 73px;
+  padding: 4px 20px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
-  text-align: center;
   letter-spacing: 0.03em;
 
   color: var(--color-head-link-title);
   background: var(--background-grey-color);
-  border: 2px solid var(--background-grey-color);
+  border: 2px solid transparent;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -228,17 +389,32 @@ body {
 .btn-portfolio:hover {
   color: var(--text-white-color);
   background-color: var(--accent-color-blue);
-  border: 2px solid var(--accent-color-blue);
+  border: 2px solid transparent;
   border-radius: 4px;
 }
-/*    WORK EXAMPLES    */
+
+/* ============ END BUTTON-NAVIGATION ============ */
+/* ============ WORK EXAMPLES ============ */
+
+.work-examples-list {
+  margin: -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.work-examples-item {
+  max-width: 370px;
+  margin: 15px;
+  border: 1px solid #eeeeee;
+}
+
+.img-description {
+  padding: 20px 24px;
+}
 
 .work-examples-img {
   width: 370px;
   height: 294px;
-}
-.work-examples-link {
-  text-decoration: none;
 }
 
 .work-examples-title {
@@ -249,12 +425,12 @@ body {
   color: var(--color-head-link-title);
 }
 
-.work-examples-description {
+.work-examples-text {
   font-size: 16px;
   line-height: 1.875;
   color: var(--main-text-color);
 }
 
-/*    END WORK EXAMPLES    */
+/* ============ END WORK EXAMPLES ============ */
 
-/*      END PORTFOLIO     */
+/* ============ END PORTFOLIO ============ */
