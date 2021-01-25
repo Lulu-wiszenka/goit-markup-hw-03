@@ -50,7 +50,6 @@ img {
 /* ============ HEADER ============ */
 .header {
   height: 80px;
-  max-width: 1600px;
   border-bottom: 1px solid var(--border-header);
 }
 
@@ -354,7 +353,6 @@ img {
 }
 
 .portfolio {
-  max-width: 1600px;
   padding-top: 80px;
   padding-bottom: 90px;
 }
